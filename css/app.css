@@ -5,8 +5,12 @@
 body {
   background: #ffffff;
   color: #111111;
-  font-size: 17px;
-  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #main {
@@ -23,12 +27,15 @@ h2 {
   margin-top: 8px;
   margin-bottom: 18px;
   line-height: 1.2;
-  font-size: 38px;
+  font-size: 42px;
+  font-weight: 600;
 }
 
 h3 {
   margin-top: var(--section-gap);
   margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .authors sup,
@@ -64,8 +71,9 @@ img {
 }
 
 .lead {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.9;
+  font-weight: 400;
 }
 
 .citation-block {
@@ -76,6 +84,12 @@ img {
   margin-top: 6px;
 }
 
+#bibtex {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 @media (max-width: 768px) {
   #main {
     padding-left: 14px;
@@ -83,11 +97,11 @@ img {
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .lead {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
