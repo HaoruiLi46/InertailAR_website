@@ -5,24 +5,43 @@
 body {
   background: #ffffff;
   color: #111111;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 #main {
   margin-top: 22px;
   margin-bottom: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 h2 {
   margin-top: 8px;
   margin-bottom: 18px;
   line-height: 1.2;
+  font-size: 38px;
 }
 
 h3 {
   margin-top: var(--section-gap);
   margin-bottom: 12px;
+}
+
+.authors sup,
+.affiliations sup {
+  margin-right: 2px;
+}
+
+.affiliations-wrap {
+  margin-top: 6px;
+}
+
+.affiliations {
+  margin-bottom: 4px;
 }
 
 .nav-pills > li > a {
@@ -45,8 +64,8 @@ img {
 }
 
 .lead {
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .citation-block {
@@ -55,4 +74,25 @@ img {
 
 #copy-bibtex {
   margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  #main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) {
+  .affiliations {
+    white-space: nowrap;
+  }
 }
