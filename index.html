@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>InertialAR</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="container" id="main">
+      <div class="row">
+        <h2 class="col-md-12 text-center">
+          INERTIALAR: AUTOREGRESSIVE 3D MOLECULE<br />
+          GENERATION WITH INERTIAL FRAMES<br />
+          <small>arXiv (2025)</small>
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <ul class="list-inline">
+            <li><a href="#">Haorui Li<sup>1</sup></a></li>
+            <li><a href="#">Weitao Du<sup>2</sup></a></li>
+            <li><a href="#">Yuqiang Li<sup>3</sup></a></li>
+            <li><a href="#">Hongyu Guo<sup>4</sup></a></li>
+            <li><a href="#">Shengchao Liu<sup>1</sup></a></li>
+          </ul>
+
+          <div class="col-md-10 text-left col-md-offset-1">
+            <ul class="list-inline">
+              <li><sup>1</sup>The Chinese University of Hong Kong</li>
+              <li><sup>2</sup>Alibaba DAMO Academy</li>
+              <li><sup>3</sup>Shanghai Artificial Intelligence Laboratory</li>
+              <li><sup>4</sup>University of Ottawa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+          <ul class="nav nav-pills nav-justified">
+            <li>
+              <a href="https://arxiv.org/abs/2510.27497" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/paper.svg" height="60" alt="Paper" />
+                <h4><strong>Paper</strong></h4>
+              </a>
+            </li>
+            <li>
+              <a class="disabled-link" href="#" aria-disabled="true" tabindex="-1">
+                <img src="assets/img/github.svg" height="60" alt="Code" />
+                <h4>
+                  <strong>Code</strong><br />
+                  <small>(coming soon)</small>
+                </h4>
+              </a>
+            </li>
+
+            <!-- Optional button template:
+            <li>
+              <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-play-circle fa-4x"></i>
+                <h4><strong>Demo</strong></h4>
+              </a>
+            </li>
+            -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <center>
+            <!-- Teaser (Unconditional): replace with your GIF/PNG if needed. -->
+            <img width="100%" src="figures/teaser_unconditional.svg" alt="Unconditional generation teaser" />
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <center>
+            <!-- Teaser (Conditional): replace with your GIF/PNG if needed. -->
+            <img width="100%" src="figures/teaser_conditional.svg" alt="Conditional generation teaser" />
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Abstract</h3>
+          <p class="lead">
+            Transformer-based autoregressive models have emerged as a unifying paradigm across modalities such as text and
+            images, but their extension to 3D molecule generation remains underexplored. The gap stems from two
+            fundamental challenges: (1) tokenizing molecules into a canonical 1D sequence of tokens that is invariant to
+            both SE(3) transformations and atom index permutations, and (2) designing an architecture capable of modeling
+            hybrid atom-based tokens that couple discrete atom types with continuous 3D coordinates. To address these
+            challenges, we introduce InertialAR. InertialAR devises a canonical tokenization that aligns molecules to
+            their inertial frames and reorders atoms to ensure SE(3) and permutation invariance. Moreover, InertialAR
+            equips the attention mechanism with geometric awareness via geometric rotary positional encoding (GeoRoPE).
+            In addition, it utilizes a hierarchical autoregressive paradigm to predict the next atom-based token,
+            predicting the atom type first and then its 3D coordinates via Diffusion loss. Experimentally, InertialAR
+            achieves state-of-the-art performance on 7 of the 10 evaluation metrics for unconditional molecule generation
+            across QM9, GEOM-Drugs, and B3LYP. Moreover, it significantly outperforms strong baselines in controllable
+            generation for targeted chemical functionality, attaining state-of-the-art results across all 5 metrics.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Model Architecture</h3>
+          <center>
+            <img src="figures/architecture.svg" width="100%" height="auto" alt="Model architecture" />
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Unconditional Generation Results</h3>
+          <center>
+            <img
+              src="figures/unconditional_results.svg"
+              width="100%"
+              height="auto"
+              alt="Unconditional generation results"
+            />
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Conditional Generation: CFG Tuning Visualization</h3>
+          <center>
+            <img src="figures/cfg_visualization.svg" width="100%" height="auto" alt="CFG tuning visualization" />
+          </center>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Conditional Generation Results</h3>
+          <center>
+            <img src="figures/conditional_results.svg" width="100%" height="auto" alt="Conditional generation results" />
+          </center>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3>Citation</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <button id="copy-bibtex" type="button" class="btn btn-default btn-sm pull-right">
+                Copy BibTeX
+              </button>
+            </div>
+          </div>
+          <div class="form-group col-md-12 col-md-offset-0 citation-block">
+            <textarea id="bibtex" class="form-control" rows="9" readonly>
+@misc{li2025inertialarautoregressive3dmolecule,
+      title={InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames},
+      author={Haorui Li and Weitao Du and Yuqiang Li and Hongyu Guo and Shengchao Liu},
+      year={2025},
+      eprint={2510.27497},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2510.27497},
+}</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

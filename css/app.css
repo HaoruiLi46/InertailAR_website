@@ -1,0 +1,56 @@
+:root {
+  --section-gap: 22px;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+}
+
+#main {
+  margin-top: 22px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: var(--section-gap);
+  margin-bottom: 12px;
+}
+
+.nav-pills > li > a {
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.nav-pills > li > a h4 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+a.disabled-link {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+img {
+  max-width: 100%;
+}
+
+.lead {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.citation-block {
+  margin-top: 10px;
+}
+
+#copy-bibtex {
+  margin-top: 6px;
+}
