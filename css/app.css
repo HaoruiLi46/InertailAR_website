@@ -116,6 +116,19 @@ h3 {
   font-size: 16px;
 }
 
+.cta-subtitle {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #333333;
+}
+
+.cta-subtitle-hidden {
+  visibility: hidden;
+}
+
 a.disabled-link {
   pointer-events: none;
   opacity: 0.45;
