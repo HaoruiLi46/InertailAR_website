@@ -47,6 +47,10 @@ h3 {
   font-weight: 600;
 }
 
+.section-title {
+  margin-bottom: 10px;
+}
+
 .authors sup,
 .affiliations sup {
   margin-right: 2px;
@@ -152,6 +156,19 @@ img {
 .figure-cols > [class*="col-"] {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.figure-item {
+  margin: 0;
+}
+
+.figure-caption {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #333333;
 }
 
 .lead {
