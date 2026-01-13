@@ -157,7 +157,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  transform: scale(var(--crop-scale, 1.1)) translateY(var(--crop-y, 0px));
+  transform: scale(var(--crop-scale, 1.6)) translate(var(--crop-x, 0px), var(--crop-y, 0px));
   transform-origin: center;
 }
 
