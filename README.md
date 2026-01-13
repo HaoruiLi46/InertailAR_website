@@ -22,10 +22,10 @@ https://<username>.github.io/<repo>/
 - Paper/Code links: `index.html`
 - Replace figures (PNG/GIF): put your files in `figures/` and update the `<img src="...">` paths in `index.html`
   - Teasers (2 rows): `figures/teaser_unconditional.svg`, `figures/teaser_conditional.svg`
-  - Architecture: `figures/architecture.svg`
-  - Unconditional results: `figures/unconditional_results.svg`
-  - Conditional CFG visualization: `figures/cfg_visualization.svg`
-  - Conditional results: `figures/conditional_results.svg`
+  - Architecture: `figures/03_model_page-0001.jpg`
+  - Unconditional results: `figures/uncond_table.png`
+  - Conditional CFG visualization: `figures/case_study3_page-0001.jpg`
+  - Conditional results: `figures/cond_table.png`
 - BibTeX: `index.html` (`<textarea id="bibtex">`)
 
 ## Local Preview
