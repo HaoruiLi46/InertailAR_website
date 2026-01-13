@@ -148,6 +148,19 @@ img {
   padding: 10px;
 }
 
+.figure-frame.figure-crop {
+  padding: 0;
+  overflow: hidden;
+}
+
+.figure-crop-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(var(--crop-scale, 1.1)) translateY(var(--crop-y, 0px));
+  transform-origin: center;
+}
+
 .figure-cols {
   margin-left: -10px;
   margin-right: -10px;
