@@ -98,15 +98,25 @@
 
       <div class="row section">
         <div class="col-md-12 text-center">
-          <center>
-            <!-- Teaser (Unconditional): replace with your GIF/PNG if needed. -->
-            <img
-              class="figure-frame"
-              width="100%"
-              src="figures/teaser_unconditional.svg"
-              alt="Unconditional generation teaser"
-            />
-          </center>
+          <!-- Teaser (Unconditional): 2 GIFs side-by-side on desktop, stacked on mobile. -->
+          <div class="row figure-cols">
+            <div class="col-md-6">
+              <img
+                class="figure-frame"
+                src="figures/mol_4_stride5_75_pymol.gif"
+                alt="Unconditional generation (example 1)"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-md-6">
+              <img
+                class="figure-frame"
+                src="figures/mol_16_stride5_75_pymol.gif"
+                alt="Unconditional generation (example 2)"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </div>
 

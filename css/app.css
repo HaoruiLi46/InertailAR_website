@@ -144,6 +144,16 @@ img {
   padding: 10px;
 }
 
+.figure-cols {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.figure-cols > [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .lead {
   font-size: 20px;
   line-height: 1.9;
