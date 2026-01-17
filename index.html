@@ -7,10 +7,10 @@
 
   <title>InertialAR</title>
 
-  <meta name="description" content="" />
+  <meta name="description" content="InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg?v=2" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
@@ -23,14 +23,15 @@
 
 <body>
   <div class="container-fluid" id="main">
+    <!-- 标题 -->
     <div class="row">
       <h2 class="col-md-12 text-center">
         InertialAR: Autoregressive 3D Molecule Generation with Inertial Frames
-        <br />
-        <small>arXiv (2025)</small>
+        <small>arXiv 2025</small>
       </h2>
     </div>
 
+    <!-- 作者信息 -->
     <div class="row">
       <div class="col-md-12 text-center">
         <ul class="list-inline authors">
@@ -52,6 +53,7 @@
       </div>
     </div>
 
+    <!-- Paper & Code 按钮 -->
     <div class="row section section-tight">
       <div class="col-md-4 col-md-offset-4 text-center">
         <ul class="nav nav-pills nav-justified cta-nav">
@@ -74,22 +76,13 @@
               </h4>
             </a>
           </li>
-
-          <!-- Optional button template:
-            <li>
-              <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-play-circle fa-4x"></i>
-                <h4><strong>Demo</strong></h4>
-              </a>
-            </li>
-            -->
         </ul>
       </div>
     </div>
 
+    <!-- Unconditional Generation -->
     <div class="row section">
-      <div class="col-md-12 text-center">
-        <!-- Teaser (Unconditional): 3 GIFs in one row on desktop, stacked on mobile. -->
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3 class="section-title">Unconditional Generation</h3>
         <div class="row figure-cols">
           <div class="col-sm-4 col-xs-12">
@@ -114,14 +107,13 @@
       </div>
     </div>
 
-    <div class="row section section-tight">
-      <div class="col-md-12 text-center">
-        <center>
-          <h3 class="section-title">Conditional Generation</h3>
-          <p class="figure-caption">
-            Conditional generation targeting molecules that contain a benzene ring and an amide functional group.
-          </p>
-        </center>
+    <!-- Conditional Generation -->
+    <div class="row section">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h3 class="section-title">Conditional Generation</h3>
+        <p class="figure-caption">
+          Conditional generation targeting molecules that contain a benzene ring and an amide functional group.
+        </p>
         <div class="row figure-cols">
           <div class="col-sm-4 col-xs-12">
             <figure class="figure-item">
@@ -145,18 +137,18 @@
       </div>
     </div>
 
+    <!-- Model Architecture -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Model Architecture</h3>
-        <center>
-          <img class="figure-frame" src="figures/03_model_page-0001.jpg" width="100%" height="auto"
-            alt="Model architecture" loading="lazy" />
-        </center>
+        <img class="figure-frame" src="figures/03_model_page-0001.jpg" width="100%" height="auto"
+          alt="Model architecture" loading="lazy" />
       </div>
     </div>
 
+    <!-- Abstract -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Abstract</h3>
         <p class="lead abstract-block">
           Transformer-based autoregressive models have emerged as a unifying paradigm across modalities such as text and
@@ -176,44 +168,40 @@
       </div>
     </div>
 
+    <!-- Unconditional Generation Results -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Unconditional Generation Results</h3>
-        <center>
-          <img class="figure-frame" src="figures/uncond_table.png" width="100%" height="auto"
-            alt="Unconditional generation results" />
-        </center>
+        <img class="figure-frame" src="figures/uncond_table.png" width="100%" height="auto"
+          alt="Unconditional generation results" />
       </div>
     </div>
 
+    <!-- CFG Tuning Visualization -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Conditional Generation: CFG Tuning Visualization</h3>
-        <center>
-          <img class="figure-frame" src="figures/case_study3_page-0001.jpg" width="100%" height="auto"
-            alt="CFG tuning visualization" loading="lazy" />
-        </center>
+        <img class="figure-frame" src="figures/case_study3_page-0001.jpg" width="100%" height="auto"
+          alt="CFG tuning visualization" loading="lazy" />
       </div>
     </div>
 
+    <!-- Conditional Generation Results -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Conditional Generation Results</h3>
-        <center>
-          <img class="figure-frame" src="figures/cond_table.png" width="100%" height="auto"
-            alt="Conditional generation results" />
-        </center>
+        <img class="figure-frame" src="figures/cond_table.png" width="100%" height="auto"
+          alt="Conditional generation results" />
       </div>
     </div>
 
-    <br />
-
+    <!-- Citation -->
     <div class="row section">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h3>Citation</h3>
         <div class="row">
           <div class="col-md-12">
-            <button id="copy-bibtex" type="button" class="btn btn-default btn-sm pull-right">
+            <button id="copy-bibtex" type="button" class="btn btn-default btn-sm">
               Copy BibTeX
             </button>
           </div>

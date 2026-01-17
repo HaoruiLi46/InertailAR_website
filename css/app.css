@@ -1,68 +1,125 @@
 :root {
-  --section-gap: 22px;
-  --frame-border: #d7d7d7;
+  --section-gap: 48px;
+  --frame-border: #e0e0e0;
+  --primary-color: #1a1a1a;
+  --secondary-color: #555;
+  --accent-color: #5b9bd5;
 }
 
 body {
   background: #ffffff;
-  color: #000000;
+  color: var(--primary-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.75;
+  line-height: 1.8;
   font-weight: 400;
-  -webkit-font-smoothing: auto;
-  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #main {
-  margin-top: 22px;
-  margin-bottom: 40px;
-  max-width: 1400px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.section {
-  margin-top: 26px;
-}
-
-.section.section-tight {
-  margin-top: 14px;
-}
+/* ==================== 标题样式 ==================== */
 
 h2 {
-  margin-top: 8px;
-  margin-bottom: 18px;
-  line-height: 1.2;
-  font-size: 42px;
-  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.25;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 small {
+  display: block;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--secondary-color);
 }
 
 h3 {
-  margin-top: var(--section-gap);
-  margin-bottom: 12px;
-  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
   font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .section-title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* ==================== 区块样式 ==================== */
+
+.section {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
+  border-top: 1px solid var(--frame-border);
+}
+
+.section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.section.section-tight {
+  margin-top: 32px;
+  padding-top: 32px;
+}
+
+/* ==================== 作者信息 ==================== */
+
+.authors {
+  margin-bottom: 8px;
+}
+
+.authors li {
+  margin: 0 8px;
+}
+
+.authors a {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.authors a:hover {
+  color: var(--accent-color);
 }
 
 .authors sup,
 .affiliations sup {
   margin-right: 2px;
+  color: var(--accent-color);
 }
 
 .affiliations-wrap {
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 .affiliations {
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
+
+.affiliations li {
+  margin: 0 12px;
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+/* ==================== CTA 按钮 ==================== */
 
 .nav-pills > li > a {
   padding-top: 6px;
@@ -70,44 +127,39 @@ h3 {
 }
 
 .nav-pills > li > a h4 {
-  margin-top: 6px;
+  margin-top: 8px;
   margin-bottom: 0;
 }
 
 .cta-nav {
-  margin-top: 12px;
+  margin-top: 24px;
 }
 
 .cta-nav > li {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .cta-link {
   display: block;
-  border: 1px solid var(--frame-border);
-  border-radius: 12px;
+  border: 2px solid var(--frame-border);
+  border-radius: 16px;
   background: #ffffff;
-  padding: 14px 12px;
-  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease, background-color 150ms ease;
+  padding: 20px 16px;
+  transition: all 0.2s ease;
 }
 
 .cta-link:hover,
 .cta-link:focus {
-  border-color: #bdbdbd;
-  background: #ffffff;
+  border-color: var(--primary-color);
+  background: #fafafa;
   text-decoration: none;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .cta-primary {
-  border-color: #000000;
-}
-
-.cta-primary:hover,
-.cta-primary:focus {
-  border-color: #000000;
+  border-color: var(--primary-color);
 }
 
 .cta-link img {
@@ -117,16 +169,17 @@ h3 {
 }
 
 .cta-link h4 {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .cta-subtitle {
   display: block;
-  margin-top: 2px;
-  font-size: 12px;
+  margin-top: 4px;
+  font-size: 13px;
   line-height: 1.25;
   font-weight: 400;
-  color: #333333;
+  color: var(--secondary-color);
 }
 
 .cta-subtitle-hidden {
@@ -135,8 +188,10 @@ h3 {
 
 a.disabled-link {
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 0.4;
 }
+
+/* ==================== 图片样式 ==================== */
 
 img {
   max-width: 100%;
@@ -144,18 +199,20 @@ img {
 
 .figure-frame {
   border: 1px solid var(--frame-border);
-  background: #ffffff;
-  padding: 10px;
+  border-radius: 12px;
+  background: #fafafa;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .figure-cols {
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .figure-cols > [class*="col-"] {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .figure-item {
@@ -163,64 +220,143 @@ img {
 }
 
 .figure-caption {
-  margin-top: 8px;
+  margin-top: 12px;
   margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.6;
   font-weight: 400;
-  color: #333333;
+  color: var(--secondary-color);
+  text-align: center;
 }
+
+/* ==================== 正文内容 ==================== */
 
 .lead {
   font-size: 20px;
   line-height: 1.9;
-  font-weight: 500;
-  color: #000000;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-align: justify;
 }
 
 .abstract-block {
-  max-width: 1120px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
+/* ==================== 引用区块 ==================== */
+
 .citation-block {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 #copy-bibtex {
-  margin-top: 6px;
+  margin-top: 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#copy-bibtex:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
 }
 
 #bibtex {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.6;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border-color: var(--frame-border);
 }
 
-@media (max-width: 768px) {
+/* ==================== 内容居中容器 ==================== */
+
+.content-wrapper {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== 响应式 ==================== */
+
+@media (max-width: 992px) {
+  :root {
+    --section-gap: 36px;
+  }
+
   #main {
-    padding-left: 14px;
-    padding-right: 14px;
+    margin-top: 40px;
+    margin-bottom: 60px;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .authors a {
+    font-size: 18px;
+  }
+
+  .affiliations li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 28px;
+  }
+
+  #main {
+    margin-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h2 small {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
   }
 
   .lead {
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .figure-frame {
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .authors li {
+    margin: 4px 6px;
+  }
+
+  .affiliations li {
+    display: block;
+    margin: 4px 0;
   }
 }
 
 @media (min-width: 1200px) {
   .affiliations {
     white-space: nowrap;
-  }
-}
-
-@media (max-width: 768px) {
-  .figure-frame {
-    padding: 8px;
   }
 }
