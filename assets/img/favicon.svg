@@ -1,6 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Favicon">
-  <rect width="128" height="128" fill="#111111"/>
-  <path d="M64 22 L102 106 H26 Z" fill="#ffffff"/>
-  <circle cx="64" cy="74" r="10" fill="#111111"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 深色背景 -->
+  <rect width="128" height="128" rx="16" fill="#1a1a1a"/>
 
+  <!-- 坐标轴 (淡灰) -->
+  <line x1="20" y1="100" x2="108" y2="100" stroke="#555" stroke-width="2"/>
+  <line x1="64" y1="108" x2="64" y2="20" stroke="#555" stroke-width="2"/>
+  <polygon points="64,16 60,24 68,24" fill="#555"/>
+  <polygon points="112,100 104,96 104,104" fill="#555"/>
+
+  <!-- 分子键 (白色) -->
+  <line x1="64" y1="50" x2="42" y2="78" stroke="#fff" stroke-width="3"/>
+  <line x1="64" y1="50" x2="86" y2="78" stroke="#fff" stroke-width="3"/>
+  <line x1="42" y1="78" x2="86" y2="78" stroke="#fff" stroke-width="3"/>
+
+  <!-- 原子 (主原子用点缀色，其他用白色) -->
+  <circle cx="64" cy="50" r="10" fill="#5b9bd5"/>
+  <circle cx="42" cy="78" r="8" fill="#ffffff"/>
+  <circle cx="86" cy="78" r="8" fill="#ffffff"/>
+</svg>
